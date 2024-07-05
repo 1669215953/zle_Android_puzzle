@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Puzzle</string>
+    <string name="help_text">
+        九宫格拼图步骤：\n
+    1.拼出2号和3号位置的图片\n
+    2.再将1号位置的图片补全完成第一层\n
+    3.保持第一层不动，完成7号和8号位置的拼图\n
+    4.看情况完成剩下位置的拼图\n\n
+    祝你成功！</string>
+
+</resources>

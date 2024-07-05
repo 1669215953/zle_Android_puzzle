@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:padding="10dp"
+        android:text="@string/help_text"
+        android:textSize="20dp" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:columnCount="3"
+        android:rowCount="3">
+
+        <TextView
+            android:gravity="center"
+            android:text="1"
+            android:width="50dp"
+            android:height="50dp"
+            android:background="@drawable/textview_border" />
+
+        <TextView
+            android:gravity="center"
+            android:text="2"
+            android:width="50dp"
+            android:height="50dp"
+            android:background="@drawable/textview_border" />
+        <TextView
+            android:gravity="center"
+            android:text="3"
+            android:width="50dp"
+            android:height="50dp"
+            android:background="@drawable/textview_border" />
+        <TextView
+            android:gravity="center"
+            android:text="4"
+            android:width="50dp"
+            android:height="50dp"
+            android:background="@drawable/textview_border" />
+        <TextView
+            android:gravity="center"
+            android:text="5"
+            android:width="50dp"
+            android:height="50dp"
+            android:background="@drawable/textview_border" />
+        <TextView
+            android:gravity="center"
+            android:text="6"
+            android:width="50dp"
+            android:height="50dp"
+            android:background="@drawable/textview_border" />
+        <TextView
+            android:gravity="center"
+            android:text="7"
+            android:width="50dp"
+            android:height="50dp"
+            android:background="@drawable/textview_border" />
+        <TextView
+            android:gravity="center"
+            android:text="8"
+            android:width="50dp"
+            android:height="50dp"
+            android:background="@drawable/textview_border" />
+        <TextView
+            android:gravity="center"
+            android:text="9"
+            android:width="50dp"
+            android:height="50dp"
+            android:background="@drawable/textview_border" />
+    </GridLayout>
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="确认"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>
