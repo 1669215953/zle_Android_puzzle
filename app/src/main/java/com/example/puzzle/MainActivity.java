@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -17,6 +18,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
@@ -74,10 +76,29 @@ public class MainActivity extends AppCompatActivity {
         disruptRandom();
         handler.sendEmptyMessageDelayed(1,1000);
 
+        LinearLayout background = findViewById(R.id.activityBackground);
         ImageView imageView1 = findViewById(R.id.first_image);
         ImageView imageView2 = findViewById(R.id.second_image);
         ImageView imageView3 = findViewById(R.id.third_image);
 
+        // 创建一个GradientDrawable对象，并设置渐变色
+        GradientDrawable gradientDrawable = new GradientDrawable(
+                GradientDrawable.Orientation.TOP_BOTTOM,
+                new int[] { Color.parseColor("#eae9f4"), Color.parseColor("#4c3428") }
+        );
+        background.setBackground(gradientDrawable);
+
+        // 创建一个GradientDrawable对象，并设置渐变色
+        GradientDrawable gradientDrawable2 = new GradientDrawable(
+                GradientDrawable.Orientation.TOP_BOTTOM,
+                new int[] { Color.parseColor("#eae9f4"), Color.parseColor("#403054") }
+        );
+
+        // 创建一个GradientDrawable对象，并设置渐变色
+        GradientDrawable gradientDrawable3 = new GradientDrawable(
+                GradientDrawable.Orientation.TOP_BOTTOM,
+                new int[] { Color.parseColor("#eae9f4"), Color.parseColor("#6aa650") }
+        );
         imageView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -94,6 +115,9 @@ public class MainActivity extends AppCompatActivity {
                 imageView2.setAlpha(0.2f);
                 imageView3.setAlpha(0.2f);
                 imageView1.setAlpha(1f);
+
+                // 设置GradientDrawable为背景的背景
+                background.setBackground(gradientDrawable);
             }
         });
         imageView2.setOnClickListener(new View.OnClickListener() {
@@ -112,6 +136,8 @@ public class MainActivity extends AppCompatActivity {
                 imageView1.setAlpha(0.2f);
                 imageView3.setAlpha(0.2f);
                 imageView2.setAlpha(1f);
+
+                background.setBackground(gradientDrawable2);
             }
         });
         imageView3.setOnClickListener(new View.OnClickListener() {
@@ -130,6 +156,8 @@ public class MainActivity extends AppCompatActivity {
                 imageView1.setAlpha(0.2f);
                 imageView2.setAlpha(0.2f);
                 imageView3.setAlpha(1f);
+
+                background.setBackground(gradientDrawable3);
             }
         });
     }
