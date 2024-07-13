@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
@@ -72,6 +73,65 @@ public class MainActivity extends AppCompatActivity {
 //        打乱拼图的函数
         disruptRandom();
         handler.sendEmptyMessageDelayed(1,1000);
+
+        ImageView imageView1 = findViewById(R.id.first_image);
+        ImageView imageView2 = findViewById(R.id.second_image);
+        ImageView imageView3 = findViewById(R.id.third_image);
+
+        imageView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                image[0] = R.mipmap.split00x00;
+                image[1] = R.mipmap.split00x01;
+                image[2] = R.mipmap.split00x02;
+                image[3] = R.mipmap.split01x00;
+                image[4] = R.mipmap.split01x01;
+                image[5] = R.mipmap.split01x02;
+                image[6] = R.mipmap.split02x00;
+                image[7] = R.mipmap.split02x01;
+                image[8] = R.mipmap.split02x02;
+                restart(imageView1);
+                imageView2.setAlpha(0.2f);
+                imageView3.setAlpha(0.2f);
+                imageView1.setAlpha(1f);
+            }
+        });
+        imageView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                image[0] = R.mipmap.two00x00;
+                image[1] = R.mipmap.two00x01;
+                image[2] = R.mipmap.two00x02;
+                image[3] = R.mipmap.two01x00;
+                image[4] = R.mipmap.two01x01;
+                image[5] = R.mipmap.two01x02;
+                image[6] = R.mipmap.two02x00;
+                image[7] = R.mipmap.two02x01;
+                image[8] = R.mipmap.two02x02;
+                restart(imageView2);
+                imageView1.setAlpha(0.2f);
+                imageView3.setAlpha(0.2f);
+                imageView2.setAlpha(1f);
+            }
+        });
+        imageView3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                image[0] = R.mipmap.three00x00;
+                image[1] = R.mipmap.three00x01;
+                image[2] = R.mipmap.three00x02;
+                image[3] = R.mipmap.three01x00;
+                image[4] = R.mipmap.three01x01;
+                image[5] = R.mipmap.three01x02;
+                image[6] = R.mipmap.three02x00;
+                image[7] = R.mipmap.three02x01;
+                image[8] = R.mipmap.three02x02;
+                restart(imageView3);
+                imageView1.setAlpha(0.2f);
+                imageView2.setAlpha(0.2f);
+                imageView3.setAlpha(1f);
+            }
+        });
     }
 
 //    随机打乱数组中的元素
